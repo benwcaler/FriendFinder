@@ -25,7 +25,7 @@
       border-radius: 6px;
       font-size: 20px;
       color: black;
-      }
+    }
   </style>
   <title>Friend Finder</title>
 </head>
@@ -35,144 +35,147 @@
     <h1>Survey Questions</h1>
   </div>
   <div>
-    <h2>
-      <strong>About you</strong>
-    </h2>
-    <h4>Name (required)</h4>
-    <input type="text" required>
-    <h4>
-      <strong>Link to photo image (required)</strong>
-    </h4>
-    <input type="text" required>
-    <hr>
-    <strong>Question 1</strong>
-    <h5>Hermione was a little too hard on Ron. </h5>
-    <select id="1">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <br>
-    <br>
-    <hr>
-    <strong>Question 2</strong>
-    <h5>Cho definitely wasn't the right choice for Harry. </h5>
-    <select id="2">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <br>
-    <br>
-    <hr>
-    <strong>Question 3</strong>
-    <h5>Severus was a hero.</h5>
-    <select id="3">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <br>
-    <br>
-    <hr>
-    <strong>Question 4</strong>
-    <h5>The Order was too passive in their approach to dealing with the ministry. </h5>
-    <select id="4">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <br>
-    <br>
-    <hr>
-    <strong>Question 5</strong>
-    <h5>Serius died too young. </h5>
-    <select id="5">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <br>
-    <br>
-    <hr>
-    <strong>Question 6</strong>
-    <h5>Malfoy needs to quick kick to the face. </h5>
-    <select id="6">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <br>
-    <br>
-    <hr>
-    <strong>Question 7</strong>
-    <h5>So does his dad. </h5>
-    <select id="7">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <br>
-    <br>
-    <hr>
-    <strong>Question 8</strong>
-    <h5>OotP > DA</h5>
-    <select id="8">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <br>
-    <br>
-    <hr>
-    <strong>Question 9</strong>
-    <h5>Neville is kind of cool. </h5>
-    <select id="9">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <br>
-    <br>
-    <hr>
-    <strong>Question 10</strong>
-    <h5>Dumbledore was Hogwart's greatest headmaster. </h5>
-    <select id="10">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    <br><br>
+    <form>
+      <h2>
+        <strong>About you</strong>
+      </h2>
+      <h4>Name (required)</h4>
+      <input id="name" type="text" required>
+      <h4>
+        <strong>Link to photo image (required)</strong>
+      </h4>
+      <input id="photo" type="text" required>
+      <hr>
+      <strong>Question 1</strong>
+      <h5>Hermione was a little too hard on Ron. </h5>
+      <select id="1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+      <hr>
+      <strong>Question 2</strong>
+      <h5>Cho definitely wasn't the right choice for Harry. </h5>
+      <select id="2">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+      <hr>
+      <strong>Question 3</strong>
+      <h5>Severus was a hero.</h5>
+      <select id="3">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+      <hr>
+      <strong>Question 4</strong>
+      <h5>The Order was too passive in their approach to dealing with the ministry. </h5>
+      <select id="4">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+      <hr>
+      <strong>Question 5</strong>
+      <h5>Serius died too young. </h5>
+      <select id="5">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+      <hr>
+      <strong>Question 6</strong>
+      <h5>Malfoy needs to quick kick to the face. </h5>
+      <select id="6">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+      <hr>
+      <strong>Question 7</strong>
+      <h5>So does his dad. </h5>
+      <select id="7">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+      <hr>
+      <strong>Question 8</strong>
+      <h5>OotP > DA</h5>
+      <select id="8">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+      <hr>
+      <strong>Question 9</strong>
+      <h5>Neville is kind of cool. </h5>
+      <select id="9">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+      <hr>
+      <strong>Question 10</strong>
+      <h5>Dumbledore was Hogwart's greatest headmaster. </h5>
+      <select id="10">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+    </form>
   </div>
   <div>
     <button id="submit">Submit</button>
@@ -183,6 +186,27 @@
       <a href="http://localhost:3000/api/friends">API Friends List</a>
     </p>
   </div>
+  <script>
+    $("#submit").on("submit", function (event) {
+      event.preventDefault()
+      var newFriend = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: []
+      }
+      for (var i = 1; i < 11; i++) {
+        newFriend.scores.push($("#" + i).val());
+      }
+      console.log(newFriend)
+      $.ajax("/api/friends", {
+        type: "POST",
+        data: newFriend
+      }).then(function() {
+        console.log("Data posted");
+        location.reload();
+      });
+    });
+  </script>
 </body>
 
 </html>
