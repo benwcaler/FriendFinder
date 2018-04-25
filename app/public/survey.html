@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
   <style>
     body {
       width: 85%;
@@ -31,6 +33,10 @@
 </head>
 
 <body>
+  <div id="img-modal" class="modal modal-dialogue">
+    <p id="modal-title"></p>
+    <p class="modal-body"></p>
+  </div>
   <div class="header">
     <h1>Survey Questions</h1>
   </div>
@@ -189,22 +195,50 @@
   <script>
     $("#submit").on("click", function (event) {
       event.preventDefault()
-      var newFriend = {
-        name: $("#name").val().trim(),
-        photo: $("#photo").val().trim(),
-        scores: []
-      }
+      $('#img-modal').modal({ "show": false });
+
+      var scores = [];
+      var userName = $("#name").val().trim();
+      var userPhoto = $("#photo").val().trim();
+
       for (var i = 1; i < 11; i++) {
-        var num = parseInt($("#" + i).val());
-        newFriend.scores.push(num);
+        if ($("#" + i).val() !== "") {
+          scores.push($("#" + i).val());
+        }
       }
-      console.log(newFriend)
-      $.post("/api/friends", newFriend)
-        .then(function (data) {
-          console.log("callback");
-          console.log(newFriend)
-          // location.reload();
-        });
+
+      if (userName === "" || userPhoto === "" || scores.length < 10) {
+        console.log("something aint right")
+        $("#modal-title").html("Error:");
+        $(".modal-dialog").css("max-width", "400px");
+        $(".modal-body").html("Please complete all fields before submitting.");
+        $('#img-modal').modal({ "show": true });
+      } else {
+        console.log("somethign is right")
+        $(".modal-dialog").css("max-width", "60%");
+        var newFriend = {
+          name: userName,
+          photo: userPhoto,
+          score: scores
+        }
+        console.log(newFriend)
+
+        $.post("/api/friends", newFriend)
+          .then(function (data) {
+            console.log(data)
+            var friendName = $("<h3>");
+            var friendImg = $("<img>");
+            friendName.addClass("friend-name");
+            friendName.html(data.name);
+            friendImg.addClass("friend-img");
+            friendImg.attr("src", data.photo);
+            friendImg.css("width", "100%");
+            $("#modal-title").html("Best Match:");
+            $(".modal-body").html(friendName);
+            $(".modal-body").append(friendImg);
+            $('#img-modal').modal({ "show": true });
+          });
+      }
     });
   </script>
 </body>
