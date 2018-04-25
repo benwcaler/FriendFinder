@@ -16,6 +16,7 @@ module.exports = function (app) {
     for (var i = 0; i < req.body.score.length;i++) {
       req.body.score[i] = parseInt(req.body.score[i]);
     }
+
     var match = [];
     for (var i = 0; i < friends.length; i++) {
       var td = 0;
@@ -23,11 +24,10 @@ module.exports = function (app) {
         td += Math.abs(friends[i].score[j] - req.body.score[j])
       }
       if (td < match[0] || match.length === 0) {
-        match = [];
         match = [td, i];
       }
     }
-    
+console.log(match)
     friends.push(req.body);
     res.send(friends[match[1]]);
   });
