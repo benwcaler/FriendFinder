@@ -27,7 +27,7 @@ module.exports = function (app) {
         match = [td, i];
       }
     }
-console.log(match)
+    
     friends.push(req.body);
     res.send(friends[match[1]]);
   });
